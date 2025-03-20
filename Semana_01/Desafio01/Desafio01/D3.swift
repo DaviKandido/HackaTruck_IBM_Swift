@@ -12,6 +12,8 @@ import SwiftUI
 struct D3: View {
     @State private var nome: String = "";
 
+    @State var showAlert = false
+
     var body: some View {
         
         ZStack{
@@ -44,12 +46,21 @@ struct D3: View {
                 }
                 Spacer()
                 
-                Button(action: { }){
+                Button(action: {
+                    self.showAlert = true
+                 }){
                     Text("Entrar")
                 }
                 .padding()
             }
             
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("Bem vindo, " + nome),
+                    message: Text("Seja bem vindo a Drogarias Pacheco"),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
         
     }
