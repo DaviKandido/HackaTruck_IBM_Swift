@@ -30,10 +30,15 @@ struct ContentView: View {
                                     .ignoresSafeArea()
                                     .scaledToFill()
                                 
-                                Image("grifinoria")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                           VStack{
+                                    Image("grifinoria")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                                    
+                                    Text("Grifinoria")
+                                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                }
                             }
                             
                             ZStack {
