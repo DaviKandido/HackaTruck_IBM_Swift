@@ -13,8 +13,14 @@ struct Torcedor: Codable, Hashable{
     let _rev: String?
     let nome: String?
     let time: String?
-    
-    
 }
 
+struct TorcedorPost: Codable{
+    let nome: String?
+    let time: String?
+}
 
+//struct Feedback: Codable {
+//    var name: String
+//    var feedback: String
+//}
